@@ -13,18 +13,34 @@
 }
 <!-- box model --> 
 {
-    [drive]
+    <!DOCTYPE html>
+    <html>
+        <head></head>
+        <body></body>
+    </html>
     Every element in web design is a rectangle
     Even elements that don't look like it (circle, text)
     Size calculated by width and height
     Width = width + padding-left + padding-right + border-left + border-right
     Height = height + padding-top + padding-bottom + border-top + border-bottom
     The body only has default stylings
-    [Add margin, broder, padding]
+    [Add margin, border, padding]
 }
-<!-- flow layout --> {
+<!-- flow layout -->
+{
+    <header></header>        
+    <nav></nav>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <footer></footer>
+}
+<!-- centering a div -->
+{
+    
+}
 
-}
 <!-- CSS Grid --> {
     rows and columns
     display: grid
