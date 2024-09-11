@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box; 
+}
+html {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+body {
+    box-sizing: border-box; 
+    width: auto;
+    height: 80vh;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px auto 1fr 1fr 1fr auto;
+    gap: 1rem;
+    grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "section-1 section-1 section-2"
+        "section-1 section-1 section-3"
+        "section-4 section-4 section-3"
+        "footer footer footer";
+}
+header {
+    background-image: url(assets/banner_chess.png);
+    background-size: cover;
+    background-position: center;
+    height: 100px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: header;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .5rem;
+    grid-area: nav;
+}
+nav, footer {
+    background-color: lightcoral;
+}
+section {
+    width: auto;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer {
+    padding: .5rem;
+    text-align: center;
+    grid-area: footer;
+}
+.section-1 {
+    grid-area: section-1;
+}
+.section-2 {
+    grid-area: section-2;
+}
+.section-3 {
+    grid-area: section-3;
+}
+.section-4 {
+    grid-area: section-4;
+}
