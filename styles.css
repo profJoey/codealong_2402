@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box; 
 }
-html {
+html, body {
     background-color: white;
     margin: 0;
     padding: 0;
@@ -9,7 +9,7 @@ html {
 body {
     box-sizing: border-box; 
     width: auto;
-    height: 80vh;
+    height: 100vh;
     padding: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -27,7 +27,6 @@ header {
     background-image: url(assets/banner_chess.png);
     background-size: cover;
     background-position: center;
-    height: 100px;
     color: white;
     display: flex;
     justify-content: center;
