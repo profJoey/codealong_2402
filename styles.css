@@ -47,6 +47,17 @@ main {
         "section-1 section-1 section-3"
         "section-4 section-4 section-4";
 }
+@media (max-width: 400px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+        "section-1"
+        "section-2"
+        "section-3"
+        "section-4";
+    }
+  }
 section {
     width: auto;
     border: 1px solid black;
