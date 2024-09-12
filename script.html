@@ -1,8 +1,20 @@
 # codealong_2402
 
+<!-- Setup -->
+ {
+    Chrome Tabs: Disco, Project Code, Live Site, Glossary, Flexbox CSS Tricks
+    Screen 1: Chrome
+    Screen 2: OBS, VS Code (script, completed project)
+
+}
 <!-- Test comment --> {
     More than one way to achieve your goal
     Depends on context and preference
+
+}
+<!-- Glossary --> {
+    These are the concepts we'll cover
+    We'll check them off as we go
 
 }
 <!-- how to code-along -->
@@ -30,7 +42,7 @@
     [TAB] Live site > Inspector > Computed
     See Box Model in Inspector
  }
- <!-- relative sizing -->
+ <!-- relative units -->
   {
     Only demonstration, don't code along
     Say I want my site to be take up the entire browser screen
@@ -62,7 +74,7 @@
         }
     </style>
   }
-<!-- flow layout --> {
+<!-- flow layout / block elements --> {
     This project, I want my content to dictate height
     <style>
         body {
@@ -84,8 +96,90 @@
     not unlike divs, but come with extra meaning
     important for accessibility
     This is our basic page structure.
+    No content so let's give everything a height/BG color to see
+    <style>
+        header, nav, section, footer {
+            height: 200px;
+            background-color: orange;
+            margin: 10px;
+        }
+    </style>
+    [?] What do you notice about the layout of these elements
+    Stacked ontop of eachother
+    Flow layout
+    Default for block level elements, i.e. <p> or <div>
+    Other layout algorithms - Flexbox and CSS Grid    
 }
-<!-- CSS Grid --> {
+<!-- inline elements-->
+ {
+    Nav look more like a nav
+    <nav>
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Play</a>
+    </nav>
+    'a' tag creates a link
+    'href' property is where you want the link to go
+    eave that blank
+    between tags, a label
+    what do you notice about the layout of links?
+    you can see that by default links don't stack ontop of eachother
+    That's because links are examples of inline elements
+    inline elements only take up width neccessary
+    and don't stack unless they run out of room
+    <span>, <a> are inline
+    I don't want the default flow of these inline links
+    [BREAK BREAK BREAK BREAK BREAK BREAK BREAK]
+ }
+<!-- Flexbox -->
+{
+    For started, I want the height based on the links
+    <style>
+    nav {
+        background-color: #00727C;
+        color: #fff;
+        padding: .5rem;
+    }
+    </style>
+    1 rem is the size of the root text size of the page
+    this might be more elegant than specific pixels because
+    in different screen sizes the font will be bigger or smaller
+    so my padding will adjust proportionately
+    okay but now I don't want my links crunches wll the way to the left
+    i want them nice and centered
+    <style>
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    </style>
+    flexbox is a css layout algorithms
+    turn on flexbox with the display property
+    then we have access to other flex props
+    turn on flex for parent container
+    control layout within the contain - children
+    [TAB] CSS Tricks
+    Flexbox control the layout along an axis
+    horizontal axis, left to right
+    default is horizontal, or row
+    <style>
+        nav {
+           flex-direction: row;
+        }
+    </style>
+    [action] show what happens when switched to column
+    <style>
+        footer {
+            background-color: #00727C;
+            color: #fff;
+            padding: .5rem;
+            text-align: center;
+        }
+    </style>
+}
+<!-- CSS Grid -->
+ {
     rows and columns
     {display: grid}
     default = 1 column; 1 row / child
