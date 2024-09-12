@@ -5,18 +5,85 @@
     Depends on context and preference
 
 }
-<!-- box model --> {
-    [drive]
+<!-- how to code-along -->
+ {
+    Today I'm going to move
+    I'll tell you when to copy the code
+ }
+<!-- auto -->
+ {
+    [OPEN] project code and live site]
+    [TAB] Code
+    Size calculated by width and height
+    The default width is auto 
+    Width set to auto takes available room
+    Default height auto
+    Height set to auto fits content
+}
+<!-- box model -->
+ {
     Every element in web design is a rectangle
     Even elements that don't look like it (circle, text)
-    Size calculated by width and height
+    Called "Box Model"
     Width = width + padding-left + padding-right + border-left + border-right
     Height = height + padding-top + padding-bottom + border-top + border-bottom
-    The body only has default stylings
-    [Add margin, broder, padding]
-}
+    [TAB] Live site > Inspector > Computed
+    See Box Model in Inspector
+ }
+ <!-- relative sizing -->
+  {
+    Only demonstration, don't code along
+    Say I want my site to be take up the entire browser screen
+    Called the viewport
+    I can't predict what size screen
+    So I don't use pixels
+    I use relative sizing
+    Example = 100vh;
+    Stands for 100% of the viewport height
+    <style>
+        body {
+            height: 100vw;
+        }
+    </style>
+    Scroll bar means site height exeeds viewports
+    Back to box model
+    Size is not just the element
+    Includes margins, padding, border size
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+    </style>
+    "border-box" value means size will include padding, border
+    margins I have to subtract from my height
+    <style>
+        body {
+            height: calc(100vh - 40px);
+        }
+    </style>
+  }
 <!-- flow layout --> {
-
+    This project, I want my content to dictate height
+    <style>
+        body {
+            height: auto;
+        }
+    </style>
+    Let's create some content
+    <header></header>        
+    <nav>
+    </nav>
+    <main>
+        <section>1</section>
+        <section>2</section>
+        <section>3</section>
+        <section>4</section>
+    </main>
+    <footer></footer>
+    header, nav, main section - semantic html
+    not unlike divs, but come with extra meaning
+    important for accessibility
+    This is our basic page structure.
 }
 <!-- CSS Grid --> {
     rows and columns
